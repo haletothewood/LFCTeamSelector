@@ -1,5 +1,5 @@
 # LFCTeamSelector
-A self-set team selector challenge in Ruby
+A self-set command line team selector challenge in Ruby.
 
 ## Core User Stories
 ### User Story 1
