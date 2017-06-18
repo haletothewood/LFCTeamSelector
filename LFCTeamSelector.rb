@@ -27,7 +27,8 @@ class Team
   end
   attr_reader :all_players
   def show
-    all_players; end
+    all_players
+  end
 end
 
 class Players
@@ -51,7 +52,8 @@ if __FILE__ == $PROGRAM_NAME
       case user_input
       when '1' 
         my_team.add(Players.new(prompt("What is the name of the player you'd like to add?"), prompt("What position?")))
-      when '2' 
+      when '2'
+        puts "Here is your team:" 
         puts my_team.show
       else 
         puts "Sorry I didn't get that."
