@@ -1,6 +1,6 @@
 module Menu
   def menu
-  "Welcome to the Liverpool team creater, please select from the following options:
+  "Welcome to my Liverpool Team Selector, please select from the following options:
   1) Add Player
   2) Show Team
   3) Quit "
@@ -48,17 +48,17 @@ if __FILE__ == $PROGRAM_NAME
   include Promtable
     my_team = Team.new
     puts "Please choose from the following list: "
-    until ['q'].include?(user_input = prompt(show).downcase)
+    until ['3'].include?(user_input = prompt(show))
       case user_input
       when '1' 
-        my_team.add(Players.new(prompt("What is the name of the player you'd like to add?"), prompt("What position?")))
+        my_team.add(Players.new(prompt("What is the name of the player you'd like to add?"), prompt("What position? (eg., GK/RB/LW)")))
       when '2'
         puts "Here is your team:" 
         puts my_team.show
       else 
         puts "Sorry I didn't get that."
       end
-      prompt "Press Enter to continue"
+      prompt "Please press Enter to continue"
     end
-    puts "Outro - Thanks for participating!"
+    puts "Outro - Thanks for participating! With that team clearly this year is our year!"
   end
